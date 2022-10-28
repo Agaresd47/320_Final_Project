@@ -1,0 +1,58 @@
+---
+title: "Project Proposal"
+author: "STOR 320.002 Group 6"
+date: "`r format(Sys.time(), '%10/%27/%2022')`"
+output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Project Roles
+
+-   **Creator:** Yuetong Liu
+-   **Interpreter:** Shiyunyang Zhao
+-   **Orator:** Zifei Dong
+-   **Deliverer:** Lorry Zou
+
+# Dataset
+
+[ World Population Dataset]
+(<https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset>
+)
+
+[GDP annual growth for each country (1960-2020) NEW]
+(<https://www.kaggle.com/datasets/zackerym/gdp-annual-growth-for-each-country-1960-2020/code>)
+
+We combined the two datasets and got the following result:
+(<https://github.com/Agaresd47/320_Final_Project/blob/b6dd307653c8ed408d45f43951e2878cbbaeb522/data/GDP%20Pop%20Combined.csv>)
+
+# Initial Questions
+
+-   **Question 1:**\
+    Is there a relationship between a country's population and GDP in
+    the past 50 years?
+-   **Question 2:**\
+    How is the population spreaded out in different continents? (In
+    other words..)What is the mean and the sum of population in each
+    continent?
+-   **Question 3:** Which country has the highest population growth in
+    the past 50 years (map)
+-   **Question 4:** Relationship between population density and GDP
+    growth rate / GDP per capita.
+-   **Question 5:** We can investigate each country in a scale of time
+    and see the pattern of GDP. We can cluster them according to the
+    rate of growth as a high growth country, moderate one and low growth
+    country. Then, what are they?
+-   **Question 6:** Which continent has the fastest GDP growth rate in
+    the past years?
+-   **Question 7:** In which 10 years did the global population grow the
+    fastest?
+-   **Question 8:** If we want to categorize GDP and population to four
+    to five different categories, what is the quantile number that is
+    statistically significant?
