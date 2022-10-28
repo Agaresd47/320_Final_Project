@@ -1,0 +1,32 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+The code chunk appears:
+```{r}
+Sys.setlocale(category = 'LC_CTYPE', locale = 'C')
+setwd("C:\\Users\\10648\\OneDrive\\22_Fall\\STOR_520\\Final_Project\\Data")
+pop = read.csv("world_population.csv")
+GDP = read.csv("GDP_Data.csv")
+Grwoth = read.csv("GDP Growth Rate.csv")
+library(dplyr)
+```
+
+Type any R code in the chunk, for example:
+```{r}
+small_gdp = GDP[GDP$Country.Code %in% pop$CCA3,]
+growth = Grwoth[Grwoth$Country.Code %in% pop$CCA3,]
+
+
+pop$Country.Code = pop$CCA3
+joined = full_join(small_gdp, pop, by = "Country.Code")
+joined = full_join(joined, growth, by = "Country.Code")
+
+joined = joined %>% select(- "CCA3")
+
+write.csv(joined,"C:\\Users\\10648\\OneDrive\\22_Fall\\STOR_520\\Final_Project\\Data\\File Name.csv", row.names = FALSE)
+
+```
+
+
